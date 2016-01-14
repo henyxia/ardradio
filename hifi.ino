@@ -3,6 +3,10 @@
 LiquidCrystal lcd(7, 8, 9, 10, 11, 12);
 int volume;
 
+void updateScreen()
+{
+}
+
 void setup()
 {
   lcd.begin(16, 2);
@@ -17,9 +21,7 @@ void loop()
   // Volume printing
   lcd.setCursor(13, 1);
   if((volume/100) >= 1)
-  {
     lcd.print(volume);
-  }
   else if((volume/10) >= 1)
   {
     lcd.print(" ");
